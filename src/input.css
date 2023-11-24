@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.hearth {
+	font-size: 0;
+	position: relative;
+	display: inline-block;
+	
+	
+	animation: breath 1.2s infinite;
+	
+	&::before {
+		content:'';
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		top: 24px;
+		left: 50%;
+		margin-left: -15px;
+		background: red;
+	}
+	.circle {
+		width: 55px;
+		height: 60px;
+		border-radius: 100%;
+		background: red;
+		display: inline-block;
+		font-size: 0;
+	}
+	
+	.triangle {
+		width: 0; 
+		height: 0; 
+		border-left: 49px solid transparent;
+		border-right: 49px solid transparent;
+		border-top: 49px solid #f00;
+		margin-top: -10px;
+		margin-left: 6px;
+	}
+}
+
+@keyframes breath {
+	0% {
+		transform: scale(1);
+	}
+	
+	20% {
+		transform: scale(1.5);
+	}
+	
+	40% {
+		transform: scale(1);
+	}
+	
+	60% {
+		transform: scale(1.7);
+	}
+	
+	100% {
+		transform: scale(1);
+	}
+}
+
+.blur-background {
+    filter: blur(4px); /* Anda dapat menyesuaikan tingkat blur sesuai keinginan */
+  }
+
+  
